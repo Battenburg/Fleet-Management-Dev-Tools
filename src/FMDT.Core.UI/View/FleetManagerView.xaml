@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              xmlns:viewModel="clr-namespace:FMDT.Core.UI.ViewModel"
              d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.FleetManagerViewModel}}">
     <UserControl.Resources>
@@ -21,6 +22,36 @@
             <StatusBar>Fleet Manager Client</StatusBar>
             <gaCoreC:LabelContentControl Header="Is Connected">
                 <CheckBox IsChecked="{Binding Path=IsConnected, Mode=OneWay}"/>
+            </gaCoreC:LabelContentControl>
+            <gaCoreC:LabelContentControl Header="IPv4 Address:">
+                <TextBox Text="{Binding Path=IPV4String}"/>
+            </gaCoreC:LabelContentControl>
+            <gaCoreC:LabelContentControl Header="Pose:">
+                <TextBox Text="{Binding Path=PoseString}"/>
+            </gaCoreC:LabelContentControl>
+            <gaCoreC:LabelContentControl Header="Create Virtual Vehicle">
+                <Button>
+                    Create
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction
+                                Command="{Binding FleetManagerCommand}"
+                                CommandParameter="{x:Static viewModel:FleetManagerOption.CreateVirtualVehicle}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </gaCoreC:LabelContentControl>
+            <gaCoreC:LabelContentControl Header="Remove Vehicle">
+                <Button>
+                    Remove
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction
+                                Command="{Binding FleetManagerCommand}"
+                                CommandParameter="{x:Static viewModel:FleetManagerOption.RemoveVehicle}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
             </gaCoreC:LabelContentControl>
         </StackPanel>
     </Grid>
