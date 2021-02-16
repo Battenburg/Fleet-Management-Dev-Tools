@@ -24,13 +24,13 @@
                 <CheckBox IsChecked="{Binding Path=IsConnected, Mode=OneWay}"/>
             </gaCoreC:LabelContentControl>
             <gaCoreC:LabelContentControl Header="Cycle">
-                <CheckBox IsChecked="{Binding Path=SchedulerState.Cycle, Mode=OneWay}"/>
+                <TextBox Text="{Binding Path=SchedulerState.Cycle, Mode=OneWay, FallbackValue='Cycle?'}"/>
             </gaCoreC:LabelContentControl>
             <gaCoreC:LabelContentControl Header="Operational Time">
-                <CheckBox IsChecked="{Binding Path=SchedulerState.UpTime, Mode=OneWay}"/>
+                <TextBox Text="{Binding Path=SchedulerState.UpTime, Mode=OneWay, FallbackValue='UpTime?'}"/>
             </gaCoreC:LabelContentControl>
             <gaCoreC:LabelContentControl Header="Instance Id">
-                <CheckBox IsChecked="{Binding Path=SchedulerState.InstanceId, Mode=OneWay}"/>
+                <TextBox Text="{Binding Path=SchedulerState.InstanceId, Mode=OneWay, FallbackValue='InstanceId?'}"/>
             </gaCoreC:LabelContentControl>
         </StackPanel>
     </Grid>
