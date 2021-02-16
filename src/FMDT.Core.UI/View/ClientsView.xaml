@@ -11,6 +11,9 @@
             <TabItem Header="Fleet Management">
                 <local:FleetManagerView/>
             </TabItem>
+            <TabItem Header="Scheduler">
+                <local:SchedulerView/>
+            </TabItem>
         </TabControl>        
     </Grid>
 </UserControl>

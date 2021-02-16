@@ -9,5 +9,7 @@ namespace FMDT.Core.UI.ViewModel
     public static class ViewModelLocator
     {
         public static FleetManagerViewModel FleetManagerViewModel { get; } = new FleetManagerViewModel();
+
+        public static SchedulerViewModel SchedulerViewModel { get; } = new SchedulerViewModel();
     }
 }

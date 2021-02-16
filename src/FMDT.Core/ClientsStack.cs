@@ -34,6 +34,7 @@ namespace FMDT.Core
         {
             clients.Add(SchedulingClients.Core.ClientFactory.CreateTcpAgentClient(IPAddress));
             clients.Add(FleetClients.Core.ClientFactory.CreateTcpFleetManagerClient(IPAddress));
+            clients.Add(SchedulingClients.Core.ClientFactory.CreateTcpSchedulingClient(IPAddress));
         }
 
         public void Dispose() => Dispose(true);
@@ -52,6 +53,9 @@ namespace FMDT.Core
         }
 
         private bool isDisposed = false;
+
+        public ISchedulingClient SchedulingClient
+            => (ISchedulingClient)clients.FirstOrDefault(e => e is ISchedulingClient);
 
         public IFleetManagerClient FleetManagerClient 
             => (IFleetManagerClient)clients.FirstOrDefault(e => e is IFleetManagerClient);

@@ -10,6 +10,8 @@ namespace FMDT.Architecture
 {
     public interface IClientsStack : IDisposable
     {
+        ISchedulingClient SchedulingClient { get; }
+
         IFleetManagerClient FleetManagerClient { get; }
 
         IAgentClient AgentClient { get; }

@@ -78,8 +78,8 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="SchedulingClients.Core, Version=15.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SchedulingClients.15.2.0\lib\net472\SchedulingClients.Core.dll</HintPath>
+    <Reference Include="SchedulingClients.Core, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SchedulingClients.16.0.0\lib\net472\SchedulingClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

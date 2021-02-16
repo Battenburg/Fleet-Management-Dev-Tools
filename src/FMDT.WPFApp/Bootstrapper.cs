@@ -16,6 +16,7 @@ namespace FMDT.WPFApp
             IClientsStack clientsStack = new ClientsStack();
 
             ViewModelLocator.FleetManagerViewModel.Model = clientsStack.FleetManagerClient;
+            ViewModelLocator.SchedulerViewModel.Model = clientsStack.SchedulingClient;
         }
     }
 }
