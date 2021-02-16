@@ -1,6 +1,7 @@
 ﻿using BaseClients.Architecture;
 using FleetClients.Core;
 using FMDT.Architecture;
+using SchedulingClients;
 using SchedulingClients.Core;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace FMDT.Core
             clients.Add(SchedulingClients.Core.ClientFactory.CreateTcpAgentClient(IPAddress));
             clients.Add(FleetClients.Core.ClientFactory.CreateTcpFleetManagerClient(IPAddress));
             clients.Add(SchedulingClients.Core.ClientFactory.CreateTcpSchedulingClient(IPAddress));
+            clients.Add(SchedulingClients.Core.ClientFactory.CreateTcpTaskStateClient(IPAddress));
         }
 
         public void Dispose() => Dispose(true);
@@ -53,6 +55,9 @@ namespace FMDT.Core
         }
 
         private bool isDisposed = false;
+
+        public ITaskStateClient TaskStateClient
+            => (ITaskStateClient)clients.FirstOrDefault(e => e is ITaskStateClient);
 
         public ISchedulingClient SchedulingClient
             => (ISchedulingClient)clients.FirstOrDefault(e => e is ISchedulingClient);

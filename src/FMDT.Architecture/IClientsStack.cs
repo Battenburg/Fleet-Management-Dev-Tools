@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FleetClients.Core;
+﻿using FleetClients.Core;
+using SchedulingClients;
 using SchedulingClients.Core;
+using System;
 
 namespace FMDT.Architecture
 {
@@ -15,5 +12,7 @@ namespace FMDT.Architecture
         IFleetManagerClient FleetManagerClient { get; }
 
         IAgentClient AgentClient { get; }
+
+        ITaskStateClient TaskStateClient { get; }
     }
 }

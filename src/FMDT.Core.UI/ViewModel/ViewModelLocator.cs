@@ -11,5 +11,7 @@ namespace FMDT.Core.UI.ViewModel
         public static FleetManagerViewModel FleetManagerViewModel { get; } = new FleetManagerViewModel();
 
         public static SchedulerViewModel SchedulerViewModel { get; } = new SchedulerViewModel();
+
+        public static TaskStateViewModel TaskStateViewModel { get; } = new TaskStateViewModel();
     }
 }

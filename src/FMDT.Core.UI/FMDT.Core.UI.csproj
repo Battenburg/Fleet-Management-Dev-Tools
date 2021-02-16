@@ -132,9 +132,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModel\AbstractCallbackClientViewModel.cs" />
     <Compile Include="ViewModel\Enumerators.cs" />
     <Compile Include="ViewModel\FleetManagerViewModel.cs" />
     <Compile Include="ViewModel\SchedulerViewModel.cs" />
+    <Compile Include="ViewModel\TaskStateViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\ClientsView.xaml.cs">
       <DependentUpon>ClientsView.xaml</DependentUpon>
@@ -144,6 +146,9 @@
     </Compile>
     <Compile Include="View\SchedulerView.xaml.cs">
       <DependentUpon>SchedulerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskStateView.xaml.cs">
+      <DependentUpon>TaskStateView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SchedulerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TaskStateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

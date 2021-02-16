@@ -14,6 +14,9 @@
             <TabItem Header="Scheduler">
                 <local:SchedulerView/>
             </TabItem>
+            <TabItem Header="Task State">
+                <local:TaskStateView/>
+            </TabItem>
         </TabControl>        
     </Grid>
 </UserControl>
